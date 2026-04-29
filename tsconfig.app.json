@@ -23,7 +23,9 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "baseUrl": ".",
+    //esta esla linea que haceque se ignore
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".", 
     "paths": {
       "@/*": ["./src/*"]
     }

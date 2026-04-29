@@ -11,4 +11,10 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server:{
+    https:{
+      key:'myfoodapp-privateKey.key',
+      cert:'myfoodapp.crt',
+    }
+  }
 })

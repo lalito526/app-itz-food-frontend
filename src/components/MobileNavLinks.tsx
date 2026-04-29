@@ -1,0 +1,26 @@
+import { Link } from "react-router"; // Nota: react-router-dom es el estándar para web
+import { Button } from "./ui/button";
+import { useAuth0 } from "@auth0/auth0-react";
+
+export default function MobileNavLinks() {
+  // Línea 6 de tu imagen: Extraemos logout
+  const { logout } = useAuth0();
+
+  return (
+    <>
+      <Link 
+        to="/user-profile" 
+        className="flex items-center px-3 font-bold hover:text-orange-500 mx-4"
+      >
+        Perfil
+      </Link>
+      
+      <Button 
+        onClick={() => logout()} 
+        className="flex items-center px-3 font-bold hover:text-orange-500 mx-4"
+      >
+        Salir
+      </Button>
+    </>
+  );
+}
